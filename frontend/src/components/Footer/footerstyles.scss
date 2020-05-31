@@ -1,0 +1,39 @@
+// ---- Page Colors ---- //
+$darkGrey: rgb(70, 75, 75);
+
+// ---- Mixins ---- //
+@mixin flex ($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+#footer {
+    @include flex(column, center);
+    background: $darkGrey;
+    // border: 1px solid white;
+    bottom: 0;
+    height: 12vh;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    #social-links {
+        @include flex(row, space-evenly);
+        margin: 0 auto;
+        width: 300px;
+        li {
+            a {
+                .link-icon {
+                    height: 20px;
+                    width: 20px;
+                }
+            }
+        }
+    }
+    p {
+        align-self: center;
+        font-size: 0.7em;
+        margin: 5px 0;
+        text-align: center;
+    }
+}

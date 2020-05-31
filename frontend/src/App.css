@@ -1,0 +1,20 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap");
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  position: relative;
+}
+
+#page-container {
+  background: #464b4b;
+  color: white;
+  font-family: 'Open Sans', sans-serif;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 10vh;
+  width: 100%;
+}
+/*# sourceMappingURL=App.css.map */

@@ -1,0 +1,26 @@
+{
+  "name": "react-portfolio",
+  "version": "1.0.0",
+  "description": "Austen's React Portfolio",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/austenpturner/React-Portfolio.git"
+  },
+  "keywords": [
+    "react",
+    "portfolio"
+  ],
+  "author": "austenpturner",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/austenpturner/React-Portfolio/issues"
+  },
+  "homepage": "https://github.com/austenpturner/React-Portfolio#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

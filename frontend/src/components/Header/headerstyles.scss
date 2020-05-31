@@ -1,0 +1,95 @@
+// ---- Page Colors ---- //
+$darkGrey: rgb(70, 75, 75);
+
+// ---- Mixins ---- //
+@mixin flex ($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+#header {
+    background: $darkGrey;
+    // border: 1px solid white;
+    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+    #banner {
+        @include flex(row, space-between);
+        // border: 1px solid white;
+        height: 10vh;
+        margin: 0px auto;
+        width: 95%;
+        h4 {
+            align-self: center;
+            font-weight: 400;
+        }
+        #links-container {
+            align-self: center;
+            // display: none;
+            #nav-links {
+                @include flex(row, flex-end);
+                li {
+                    margin: 0 30px;
+                }
+            }
+        }
+        #nav-symbol {
+            display: none;
+        }
+    }
+    #slider {
+        @include flex(row, flex-end);
+        width: 60%;
+        #nav-links {
+            @include flex(column, space-around);
+            // background-color: $lightBlue;
+            position: fixed;
+            height: calc(100vh - 64px);
+            top: 64px;
+            width: 60vw;
+            transition: right 1000ms ease-in-out;
+            z-index: 3;
+            li {
+                margin: 0 auto;
+                a {
+                    border-bottom: 1px solid transparent;
+                    // color: $darkGrey;
+                    font-size: 1.2em;
+                    font-weight: lighter;
+                    padding-bottom: 2px;
+                    margin: 10px 40px;
+                    transition: font-size 400ms ease-in-out, border-bottom 300ms ease-in-out;
+                    &:hover {
+                        // border-bottom: 3px solid $darkGrey;
+                        font-size: 1.5em;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.slide-left {
+    right: 0vw;
+}
+.slide-right {
+    right: -60vw;
+}
+
+@media (min-width: 768px) {
+    #links-container {
+        display: inline-block;
+    }
+}

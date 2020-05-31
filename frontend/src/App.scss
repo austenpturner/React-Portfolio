@@ -1,0 +1,32 @@
+// ---- Import Google Fonts ---- //
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600&display=swap');
+
+// ---- Page Colors ---- //
+$darkGrey: rgb(70, 75, 75);
+
+// ---- Mixins ---- //
+@mixin flex ($direction, $justify) {
+    display: flex;
+    flex-direction: $direction;
+    justify-content: $justify;
+}
+
+// ---- CSS Reset ---- //
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    position: relative;
+}
+
+// ---- Page Styles ---- //
+#page-container {
+    background: $darkGrey;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+    height: 100vh;
+    left: 0;
+    position: fixed;
+    top: 10vh;
+    width: 100%;
+}
