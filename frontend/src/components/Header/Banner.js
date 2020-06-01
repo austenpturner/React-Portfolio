@@ -10,6 +10,7 @@ class Banner extends Component {
               <a 
                 id='logo' 
                 href='#top'
+                onClick={this.props.handleNavSlide}
               >
                 Austen Turner
               </a>
@@ -22,10 +23,19 @@ class Banner extends Component {
                   <li><a className='nav-link' href='#' target='_blank'>Resume</a></li>
               </ul>
           </nav>
-          <div id='nav-symbol'>
-              <div className='line' id='line1'></div>
-              <div className='line' id='line2'></div>
-              <div className='line' id='line3'></div>
+          <div id='nav-symbol' onClick={this.props.handleNavSlide}>
+              <div 
+                  className={this.props.sliderDown ? "line toggle1" : "line"} 
+                  id='line1'
+              ></div>
+              <div 
+                  className={this.props.sliderDown ? "line toggle2" : "line"} 
+                  id='line2'
+              ></div>
+              <div 
+                  className={this.props.sliderDown ? "line toggle3" : "line"} 
+                  id='line3'
+              ></div>
           </div>
       </div>
     );

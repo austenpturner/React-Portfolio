@@ -4,12 +4,50 @@ import "./headerstyles.css";
 class NavSlider extends Component {
   render() {
     return (
-      <nav id='slider'>
-          <ul id='nav-links' className='slide-right'>
-              <li><a className='nav-link' href='#about'>About</a></li>
-              <li><a className='nav-link' href='#portfolio'>Portfolio</a></li>
-              <li><a className='nav-link' href='#contact'>Contact</a></li>
-              <li><a className='nav-link' href='#' target='_blank'>Resume</a></li>
+      <nav 
+          id='slider' 
+          className={this.props.sliderDown ? "slide-down" : "slide-up"}
+      >
+          <ul 
+              id='slider-links' 
+              className='slide-right'
+          >
+              <li>
+                  <a 
+                      className='slider-link' 
+                      // href='#about'
+                      onClick={this.props.handleNavSlide}
+                  >
+                      About
+                  </a>
+              </li>
+              <li>
+                  <a 
+                      className='slider-link' 
+                      // href='#portfolio'
+                      onClick={this.props.handleNavSlide}
+                  >
+                      Portfolio
+                  </a>
+              </li>
+              <li>
+                  <a 
+                      className='slider-link' 
+                      // href='#contact'
+                      onClick={this.props.handleNavSlide}
+                  >
+                      Contact
+                  </a>
+              </li>
+              <li>
+                  <a 
+                      className='slider-link' 
+                      // href='#' target='_blank'
+                      onClick={this.props.handleNavSlide}
+                  >
+                      Resume
+                  </a>
+              </li>
           </ul>
       </nav>
     );

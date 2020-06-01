@@ -18,26 +18,24 @@ li {
 }
 
 #header {
-    background: $darkGrey;
-    // border: 1px solid white;
-    box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.5);
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
     #banner {
         @include flex(row, space-between);
-        // border: 1px solid white;
+        background: $darkGrey;
+        box-shadow: -5px 0px 10px rgba(0, 0, 0, 0.5);
         height: 10vh;
         margin: 0px auto;
-        width: 95%;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 2;
         h4 {
             align-self: center;
             font-weight: 400;
+            margin: 0 30px;
         }
         #links-container {
             align-self: center;
-            // display: none;
+            display: none;
             #nav-links {
                 @include flex(row, flex-end);
                 li {
@@ -46,46 +44,60 @@ li {
             }
         }
         #nav-symbol {
-            display: none;
+            cursor: pointer;
+            // display: none;
+            padding: 10px;
+            position: absolute;
+            right: 0px;
+            top: 0px;
+            z-index: 2;
+            .line {
+                background: white;
+                border-radius: 5px;
+                height: 3px;
+                margin: 8px;
+                transition: all 500ms ease-in-out;
+                width: 40px;
+            }
         }
     }
+    .toggle1 {
+        transform: rotate(-45deg) translate(-5px, 11px);
+    }
+    .toggle2 {
+        opacity: 0;
+    }
+    .toggle3 {
+        transform: rotate(45deg) translate(-5px, -11px);
+    }
     #slider {
-        @include flex(row, flex-end);
-        width: 60%;
-        #nav-links {
+        @include flex(row, center);
+        background: $darkGrey;
+        height: 39vh;
+        position: fixed;
+        // top: -29vh;
+        width: 100vw;
+        transition: top 1000ms ease-in-out;
+        z-index: 1;
+        #slider-links {
             @include flex(column, space-around);
-            // background-color: $lightBlue;
-            position: fixed;
-            height: calc(100vh - 64px);
-            top: 64px;
-            width: 60vw;
-            transition: right 1000ms ease-in-out;
-            z-index: 3;
+            width: 100%;
             li {
-                margin: 0 auto;
+                @include flex(row, center);
+                height: calc(39vh/4);
                 a {
-                    border-bottom: 1px solid transparent;
-                    // color: $darkGrey;
-                    font-size: 1.2em;
-                    font-weight: lighter;
-                    padding-bottom: 2px;
-                    margin: 10px 40px;
-                    transition: font-size 400ms ease-in-out, border-bottom 300ms ease-in-out;
-                    &:hover {
-                        // border-bottom: 3px solid $darkGrey;
-                        font-size: 1.5em;
-                    }
+                    align-self: center;
+                    color: white;
                 }
             }
         }
     }
-}
-
-.slide-left {
-    right: 0vw;
-}
-.slide-right {
-    right: -60vw;
+    .slide-up {
+        top: -29vh;
+    }
+    .slide-down {
+        top: 10vh;
+    }
 }
 
 @media (min-width: 768px) {
