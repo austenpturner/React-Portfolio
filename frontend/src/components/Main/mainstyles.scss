@@ -1,5 +1,6 @@
 // ---- Page Colors ---- //
 $darkGrey: rgb(70, 75, 75);
+$lightBlue: rgb(149, 255, 220);
 
 // ---- Mixins ---- //
 @mixin flex ($direction, $justify) {
@@ -8,8 +9,67 @@ $darkGrey: rgb(70, 75, 75);
     justify-content: $justify;
 }
 
+h1, h2 {
+    color: $lightBlue;
+    font-weight: 400;
+}
+
+h2 {
+    font-size: 2.2em;
+}
+
 #main {
-    background: linear-gradient(rgb(112, 117, 119), rgb(144, 152, 155));
-    min-height: 78vh;
+    background: $darkGrey;
+    min-height: 90vh;
     overflow-x: auto;
+    #title {
+        @include flex (column, space-evenly);
+        height: 90vh;
+        text-align: center;
+        #headers-container {
+            h1 {
+                font-size: 2.4em;
+                margin: 20px;
+            }
+            h4 {
+                text-transform: uppercase;
+            }
+        }
+    }
+    #about {
+        @include flex (column, space-evenly);
+        h2, p, h4, ul {
+            margin: 10px auto;
+            max-width: 668px;
+            width: 90%;
+        }
+        p {
+            font-weight: 400;
+        }
+        h4 {
+            color: $lightBlue;
+            font-size: 1.2em;
+            font-weight: 400;
+            margin: 30px auto 10px;
+        }
+        ul {
+            
+            li {
+                background: white;
+                border-radius: 5px;
+                color: $darkGrey;
+                display: inline-block;
+                margin: 10px;
+                padding: 6px 10px;
+                text-align: center;
+                width: 45%;
+            }
+        }
+    }
+    #portfolio {
+        h2 {
+            margin: 10px, auto;
+            width: 90%;
+        }
+    }
 }

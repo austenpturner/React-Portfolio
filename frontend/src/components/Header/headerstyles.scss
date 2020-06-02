@@ -1,5 +1,6 @@
 // ---- Page Colors ---- //
 $darkGrey: rgb(70, 75, 75);
+$lightBlue: rgb(149, 255, 220);
 
 // ---- Mixins ---- //
 @mixin flex ($direction, $justify) {
@@ -44,12 +45,10 @@ li {
             }
         }
         #nav-symbol {
+            align-self: center;
             cursor: pointer;
             // display: none;
-            padding: 10px;
-            position: absolute;
-            right: 0px;
-            top: 0px;
+            padding: 20px;
             z-index: 2;
             .line {
                 background: white;
@@ -72,12 +71,12 @@ li {
     }
     #slider {
         @include flex(row, center);
-        background: $darkGrey;
-        height: 39vh;
+        background: rgb(121, 130, 131);
+        height: 90vh;
         position: fixed;
         // top: -29vh;
         width: 100vw;
-        transition: top 1000ms ease-in-out;
+        transition: top 800ms ease-in-out;
         z-index: 1;
         #slider-links {
             @include flex(column, space-around);
@@ -88,12 +87,13 @@ li {
                 a {
                     align-self: center;
                     color: white;
+                    font-size: 1.2em;
                 }
             }
         }
     }
     .slide-up {
-        top: -29vh;
+        top: -90vh;
     }
     .slide-down {
         top: 10vh;

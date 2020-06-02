@@ -5,7 +5,15 @@ class Title extends Component {
   render() {
     return (
       <div id="title">
-        <h1>Title</h1>
+          <div id="headers-container">
+              <h1>Hi, I'm Austen</h1>
+              <h4>A full-stack web developer</h4>
+          </div>
+          <div className='chevron-container'>
+              <a href='#about'>
+                  <i className='fas fa-chevron-down fa-3x bounce'></i>
+              </a>
+          </div>
       </div>
     );
   }

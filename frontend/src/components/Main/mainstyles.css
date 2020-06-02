@@ -1,7 +1,85 @@
+h1, h2 {
+  color: #95ffdc;
+  font-weight: 400;
+}
+
+h2 {
+  font-size: 2.2em;
+}
+
 #main {
-  background: -webkit-gradient(linear, left top, left bottom, from(#707577), to(#90989b));
-  background: linear-gradient(#707577, #90989b);
-  min-height: 78vh;
+  background: #464b4b;
+  min-height: 90vh;
   overflow-x: auto;
+}
+
+#main #title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: 90vh;
+  text-align: center;
+}
+
+#main #title #headers-container h1 {
+  font-size: 2.4em;
+  margin: 20px;
+}
+
+#main #title #headers-container h4 {
+  text-transform: uppercase;
+}
+
+#main #about {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+#main #about h2, #main #about p, #main #about h4, #main #about ul {
+  margin: 10px auto;
+  max-width: 668px;
+  width: 90%;
+}
+
+#main #about p {
+  font-weight: 400;
+}
+
+#main #about h4 {
+  color: #95ffdc;
+  font-size: 1.2em;
+  font-weight: 400;
+  margin: 30px auto 10px;
+}
+
+#main #about ul li {
+  background: white;
+  border-radius: 5px;
+  color: #464b4b;
+  display: inline-block;
+  margin: 10px;
+  padding: 6px 10px;
+  text-align: center;
+  width: 45%;
+}
+
+#main #portfolio h2 {
+  margin: 10px, auto;
+  width: 90%;
 }
 /*# sourceMappingURL=mainstyles.css.map */

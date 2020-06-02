@@ -11,11 +11,10 @@ $darkGrey: rgb(70, 75, 75);
 #footer {
     @include flex(column, center);
     background: $darkGrey;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
     bottom: 0;
-    height: 12vh;
-    position: fixed;
+    height: 20vh;
     width: 100%;
-    z-index: 1;
     #social-links {
         @include flex(row, space-evenly);
         margin: 0 auto;
@@ -23,16 +22,16 @@ $darkGrey: rgb(70, 75, 75);
         li {
             a {
                 .link-icon {
-                    height: 20px;
-                    width: 20px;
+                    height: 26px;
+                    width: 26px;
                 }
             }
         }
     }
     p {
         align-self: center;
-        font-size: 0.7em;
-        margin: 5px 0;
+        font-size: 0.8em;
+        margin: 10px 0;
         text-align: center;
     }
 }
