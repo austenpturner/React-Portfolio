@@ -39,14 +39,16 @@ h2 {
         }
     }
     #about {
-        @include flex (column, space-evenly);
         // border: 1px solid white;
         margin: 20px auto;
         min-height: 90vh;
         h2, p, h4, ul {
-            margin: 10px auto;
+            margin: 20px auto;
             max-width: 668px;
             width: 90%;
+        }
+        h2 {
+            margin-bottom: 30px;
         }
         p {
             font-weight: 300;
@@ -58,7 +60,8 @@ h2 {
             margin: 30px auto 10px;
         }
         ul {
-            
+            @include flex (row, space-evenly);
+            flex-wrap: wrap;
             li {
                 background: white;
                 border-radius: 5px;
@@ -86,9 +89,12 @@ h2 {
             width: 90%;
         }
         #grid {
+            @include flex (row, space-evenly);
+            flex-wrap: wrap;
             margin: 0px auto;
             .project {
                 display: inline-block;
+                margin: auto;
                 h4 {
                     font-weight: 400;
                     padding: 5px;
@@ -96,31 +102,44 @@ h2 {
                 }
                 .image-container {
                     @include flex (column, space-evenly);
-                    background: white;
+                    // background: white;
+                    background: rgb(67, 67, 68);
                     border: 3px solid rgb(60, 60, 60);
                     border-radius: 5px;
-                    height: 200px;
-                    margin: 10px;
+                    height: 180px;
+                    margin: 5px 10px;
                     overflow: hidden;
                     width: 200px;
                     img {
                         align-self: center;
-                        padding: 12px;
-                        max-height: 200px;
+                        max-height: 180px;
                     }
                 }
                 .links {
-                    @include flex(row, left);
-                    padding: 10px 10px 0px;
-                    width: 100%;
-                    #github-icon {
-                        height: 30px;
-                        width: 30px;
+                    @include flex (column, center);
+                    background: rgba(100, 100, 100, 0.5);
+                    border-radius: 5px;
+                    height: 180px;
+                    opacity: 0;
+                    position: absolute;
+                    top: 0;
+                    width: 200px;
+                    a {
+                        align-self: center;
+                        background: linear-gradient($lightBlue, rgb(49, 223, 165));
+                        border: 2px solid rgb(49, 223, 165);
+                        border-radius: 5px;
+                        color: $darkGrey;
+                        font-size: 0.8em;
+                        font-weight: 600;
+                        margin: 10px;
+                        padding: 10px;
+                        text-align: center;
+                        width: 70%;
                     }
-                    #website-icon {
-                        height: 26px;
-                        margin: 2px 5px;
-                        width: 26px;
+                    &:hover {
+                        opacity: 1;
+                        transition: all 300ms ease-in-out;
                     }
                 }
             }
@@ -148,7 +167,7 @@ h2 {
                 margin: 10px 0; 
             }
             button {
-                background-image: linear-gradient($lightBlue, rgb(49, 223, 165));
+                background: linear-gradient($lightBlue, rgb(49, 223, 165));
                 border: 1px solid rgb(49, 223, 165);
                 border-radius: 5px;
                 display: inline-block;
@@ -166,42 +185,5 @@ h2 {
 }
 
 @media only screen and (min-width: 768px) {
-    #grid {
-        .project {
-            .links {
-                @include flex(column, center);
-                background-color: rgba(240, 240, 240, 0.7);
-                color: $darkGrey;
-                height: 260px;
-                opacity: 0;
-                padding-top: 20px;
-                position: absolute;
-                text-align: center;
-                top: 0px;
-                width: 100%;
-                z-index: 1;
-                .icon-link {
-                    display: none;
-                }
-                &:hover {
-                    opacity: 1;
-                    // button {
-                    //     background-image: linear-gradient($lightBlue, rgb(49, 223, 165));
-                    //     border: 1px solid rgb(49, 223, 165);
-                    //     border-radius: 1em;
-                    //     display: inline-block;
-                    //     font-family: 'Noto Sans JP', sans-serif;
-                    //     font-weight: bold;
-                    //     margin: 14px auto;
-                    //     padding: 16px 20px;
-                    //     a {
-                    //         color: $darkGrey;
-                    //         cursor: pointer;
-                    //         text-decoration: none;
-                    //     }
-                    // }
-                }
-            }
-        }
-    }
+    
 }

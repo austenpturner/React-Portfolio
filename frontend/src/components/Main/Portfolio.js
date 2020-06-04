@@ -51,12 +51,12 @@ class Portfolio extends Component {
                             <a className='icon-link' href='https://github.com/austenpturner/PlaylistDB' target='_blank'>
                                 <img id='website-icon' src='./assets/images/social-icons/website-white.png' />
                             </a> */}
-                            <button>
+                            {/* <button> */}
                                 <a href='https://github.com/austenpturner/PlaylistDB' target='_blank'>View on GitHub</a>
-                            </button>
-                            <button>
+                            {/* </button> */}
+                            {/* <button> */}
                                 <a href='https://github.com/austenpturner/PlaylistDB' target='_blank'>Visit Deployed Site</a>
-                            </button>
+                            {/* </button> */}
                         </div>
                     </div>
                 </div>
