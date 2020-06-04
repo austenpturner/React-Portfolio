@@ -31,8 +31,13 @@ li {
         z-index: 2;
         h4 {
             align-self: center;
-            font-weight: 400;
+            font-size: 1.1em;
+            font-weight: 500;
             margin: 0 30px;
+            text-transform: uppercase;
+            a:hover {
+                color: $lightBlue;
+            }
         }
         #links-container {
             align-self: center;
@@ -41,13 +46,16 @@ li {
                 @include flex(row, flex-end);
                 li {
                     margin: 0 30px;
+                    font-family: 'Manrope', sans-serif;
+                    a:hover {
+                        color: $lightBlue;
+                    }    
                 }
             }
         }
         #nav-symbol {
             align-self: center;
             cursor: pointer;
-            // display: none;
             padding: 20px;
             z-index: 2;
             .line {
@@ -74,7 +82,6 @@ li {
         background: rgb(121, 130, 131);
         height: 90vh;
         position: fixed;
-        // top: -29vh;
         width: 100vw;
         transition: top 800ms ease-in-out;
         z-index: 1;
@@ -100,8 +107,15 @@ li {
     }
 }
 
-@media (min-width: 768px) {
-    #links-container {
-        display: inline-block;
+@media only screen and (min-width: 768px) {
+    #header {
+        #banner {
+            #links-container {
+                display: inline-block;
+            }
+            #nav-symbol {
+                display: none;
+            }
+        }
     }
 }

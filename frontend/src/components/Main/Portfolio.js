@@ -34,17 +34,35 @@ class Portfolio extends Component {
     return (
       <div id="portfolio">
         <h2>Portfolio</h2>
-          <div id="grid">
-          {projects.map((project, index) => {
-              return (
-                <h4
-                    key={index}
-                >
-                    {project.title}
-                </h4>
-              );
-            })}
-          </div>
+        <div id="grid">
+        {projects.map((project, index) => {
+            const source = `/assets/images/portfolio-images/${project.description}.jpg`;
+            return (
+                <div className="project">
+                    <h4 key={index}>
+                        {project.title}
+                    </h4>
+                    <div className="image-container">
+                        <img src={source} alt={project.description}/>
+                        <div className='links'>
+                            {/* <a className='icon-link' href='https://github.com/austenpturner/PlaylistDB' target='_blank'>
+                                <img id='github-icon' src='./assets/images/social-icons/github-white.svg' />
+                            </a>
+                            <a className='icon-link' href='https://github.com/austenpturner/PlaylistDB' target='_blank'>
+                                <img id='website-icon' src='./assets/images/social-icons/website-white.png' />
+                            </a> */}
+                            <button>
+                                <a href='https://github.com/austenpturner/PlaylistDB' target='_blank'>View on GitHub</a>
+                            </button>
+                            <button>
+                                <a href='https://github.com/austenpturner/PlaylistDB' target='_blank'>Visit Deployed Site</a>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            );
+          })}
+        </div>
       </div>
     );
   }
