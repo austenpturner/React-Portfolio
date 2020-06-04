@@ -4,27 +4,39 @@ import "./mainstyles.css";
 const projects = [
   {
     title: "Weather Dashboard",
-    description: "weather-dashboard"
+    description: "weather-dashboard",
+    githubLink: "https://github.com/austenpturner/weather-dashboard",
+    deployedSite: "https://austenpturner.github.io/weather-dashboard/"
   },
   {
     title: "Password Generator",
-    description: "password-generator"
+    description: "password-generator",
+    githubLink: "https://github.com/austenpturner/password-generator",
+    deployedSite: "https://austenpturner.github.io/password-generator/"
   },
   {
     title: "Tee Time",
-    description: "tee-time"
+    description: "tee-time",
+    githubLink: "https://github.com/E-Bossler/tee-time",
+    deployedSite: "https://tee-time-seattle.herokuapp.com/"
   },
   {
     title: "Scrabble Dabble",
-    description: "scrabble-dabble"
+    description: "scrabble-dabble",
+    githubLink: "https://github.com/dustinjack99/ScrabbleDabble",
+    deployedSite: "https://dustinjack99.github.io/ScrabbleDabble/"
   },
   {
     title: "Work Day Scheduler",
-    description: "day-planner"
+    description: "day-planner",
+    githubLink: "https://github.com/austenpturner/day-planner",
+    deployedSite: "https://austenpturner.github.io/day-planner/"
   },
   {
     title: "Eat-Da-Burger",
-    description: "burger-app"
+    description: "burger-app",
+    githubLink: "https://github.com/austenpturner/eat-da-burger",
+    deployedSite: "https://devour-burgers-hw.herokuapp.com/"
   }
 ]
 
@@ -37,6 +49,8 @@ class Portfolio extends Component {
         <div id="grid">
         {projects.map((project, index) => {
             const source = `/assets/images/portfolio-images/${project.description}.jpg`;
+            const githubLink = project.githubLink;
+            const deployedSite = project.deployedSite;
             return (
                 <div className="project">
                     <h4 key={index}>
@@ -51,12 +65,8 @@ class Portfolio extends Component {
                             <a className='icon-link' href='https://github.com/austenpturner/PlaylistDB' target='_blank'>
                                 <img id='website-icon' src='./assets/images/social-icons/website-white.png' />
                             </a> */}
-                            {/* <button> */}
-                                <a href='https://github.com/austenpturner/PlaylistDB' target='_blank'>View on GitHub</a>
-                            {/* </button> */}
-                            {/* <button> */}
-                                <a href='https://github.com/austenpturner/PlaylistDB' target='_blank'>Visit Deployed Site</a>
-                            {/* </button> */}
+                            <a href={githubLink} target='_blank'>View on GitHub</a>
+                            <a href={deployedSite} target='_blank'>Visit Deployed Site</a>
                         </div>
                     </div>
                 </div>
