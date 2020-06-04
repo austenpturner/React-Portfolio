@@ -11,11 +11,14 @@ class Header extends Component {
     };
   }
 
-  handleNavSlide() {
-    if (this.state.sliderDown) {
-      this.setState({ sliderDown: false});
+  handleNavSlide(event) {
+    const targetId = event.target.id;
+    if (!this.state.sliderDown && targetId === "logo") {
+        return;
+    } else if (this.state.sliderDown) {
+        this.setState({ sliderDown: false});
     } else {
-      this.setState({ sliderDown: true });
+        this.setState({ sliderDown: true });
     }
   }
 

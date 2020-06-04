@@ -15,7 +15,7 @@ class NavSlider extends Component {
               <li>
                   <a 
                       className='slider-link' 
-                      // href='#about'
+                      href='#about'
                       onClick={this.props.handleNavSlide}
                   >
                       About
@@ -24,7 +24,7 @@ class NavSlider extends Component {
               <li>
                   <a 
                       className='slider-link' 
-                      // href='#portfolio'
+                      href='#portfolio'
                       onClick={this.props.handleNavSlide}
                   >
                       Portfolio
@@ -33,7 +33,7 @@ class NavSlider extends Component {
               <li>
                   <a 
                       className='slider-link' 
-                      // href='#contact'
+                      href='#contact'
                       onClick={this.props.handleNavSlide}
                   >
                       Contact
@@ -42,7 +42,7 @@ class NavSlider extends Component {
               <li>
                   <a 
                       className='slider-link' 
-                      // href='#' target='_blank'
+                      href='#' target='_blank'
                       onClick={this.props.handleNavSlide}
                   >
                       Resume
