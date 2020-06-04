@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Resume from "../Documents/Austen-Turner-Resume.pdf"
 import "../../App.css";
 import "./headerstyles.css";
 
@@ -20,7 +21,7 @@ class Banner extends Component {
                   <li><a className='nav-link' href='#about'>About</a></li>
                   <li><a className='nav-link' href='#portfolio'>Portfolio</a></li>
                   <li><a className='nav-link' href='#contact'>Contact</a></li>
-                  <li><a className='nav-link' href='#' target='_blank'>Resume</a></li>
+                  <li><a className='nav-link' href={Resume} target='_blank'>Resume</a></li>
               </ul>
           </nav>
           <div id='nav-symbol' onClick={this.props.handleNavSlide}>

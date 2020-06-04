@@ -52,8 +52,8 @@ class Portfolio extends Component {
             const githubLink = project.githubLink;
             const deployedSite = project.deployedSite;
             return (
-                <div className="project">
-                    <h4 key={index}>
+                <div className="project" key={index}>
+                    <h4>
                         {project.title}
                     </h4>
                     <div className="image-container">

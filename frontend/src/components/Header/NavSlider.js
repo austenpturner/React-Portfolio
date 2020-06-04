@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import "./headerstyles.css";
+import Resume from "../Documents/Austen-Turner-Resume.pdf";
 
 class NavSlider extends Component {
   render() {
@@ -42,7 +43,8 @@ class NavSlider extends Component {
               <li>
                   <a 
                       className='slider-link' 
-                      href='#' target='_blank'
+                      href={Resume} 
+                      target='_blank'
                       onClick={this.props.handleNavSlide}
                   >
                       Resume
