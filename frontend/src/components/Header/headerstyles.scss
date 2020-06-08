@@ -90,11 +90,15 @@ li {
             width: 100%;
             li {
                 @include flex(row, center);
-                height: calc(39vh/4);
+                height: calc(90vh/4);
                 a {
                     align-self: center;
                     color: white;
+                    cursor: pointer;
                     font-size: 1.2em;
+                    &:hover {
+                        color: $lightBlue;
+                    }
                 }
             }
         }

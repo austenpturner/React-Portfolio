@@ -39,9 +39,8 @@ h2 {
         }
     }
     #about {
-        // border: 1px solid white;
-        margin: 20px auto;
-        min-height: 90vh;
+        margin: 80px auto;
+        // min-height: 90vh;
         h2, p, h4, ul {
             margin: 20px auto;
             max-width: 668px;
@@ -75,9 +74,8 @@ h2 {
         }
     }
     #portfolio {
-        // border: 1px solid white;
-        margin: 20px auto;
-        min-height: 90vh;
+        margin: 80px auto;
+        // min-height: 90vh;
         h2,
         #grid {
             margin: 10px auto;
@@ -148,13 +146,16 @@ h2 {
     }
     #contact {
         margin: 20px auto 0;
+        // min-height: 90vh;
         h2 {
             margin: 40px auto 20px;
+            max-width: 668px;
             width: 90%;
         }
         #content-container {
             @include flex (column, space-evenly);
             margin: 10px auto;
+            max-width: 668px;
             width: 90%;
             h4 {
                 font-size: 1.5em;
@@ -168,6 +169,7 @@ h2 {
         #contact-form {
             @include flex (column, space-evenly);
             margin: 20px auto 40px;
+            max-width: 668px;
             width: 80%;
             h4 {
                 font-weight: 400;

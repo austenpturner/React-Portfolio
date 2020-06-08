@@ -149,7 +149,7 @@ li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: calc(39vh/4);
+  height: calc(90vh/4);
 }
 
 #header #slider #slider-links li a {
@@ -157,7 +157,12 @@ li {
       -ms-grid-row-align: center;
       align-self: center;
   color: white;
+  cursor: pointer;
   font-size: 1.2em;
+}
+
+#header #slider #slider-links li a:hover {
+  color: #95ffdc;
 }
 
 #header .slide-up {

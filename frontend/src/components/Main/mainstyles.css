@@ -40,8 +40,7 @@ h2 {
 }
 
 #main #about {
-  margin: 20px auto;
-  min-height: 90vh;
+  margin: 80px auto;
 }
 
 #main #about h2, #main #about p, #main #about h4, #main #about ul {
@@ -92,8 +91,7 @@ h2 {
 }
 
 #main #portfolio {
-  margin: 20px auto;
-  min-height: 90vh;
+  margin: 80px auto;
 }
 
 #main #portfolio h2,
@@ -212,6 +210,7 @@ h2 {
 
 #main #contact h2 {
   margin: 40px auto 20px;
+  max-width: 668px;
   width: 90%;
 }
 
@@ -227,6 +226,7 @@ h2 {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin: 10px auto;
+  max-width: 668px;
   width: 90%;
 }
 
@@ -252,6 +252,7 @@ h2 {
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
   margin: 20px auto 40px;
+  max-width: 668px;
   width: 80%;
 }
 

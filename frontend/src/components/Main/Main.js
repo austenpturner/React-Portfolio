@@ -6,7 +6,20 @@ import Contact from "./Contact";
 import "./mainstyles.css";
 
 window.addEventListener("hashchange", function () {
-  window.scrollTo(window.scrollX, window.scrollY - 60);
+    let intViewportHeight = window.innerHeight;
+    let distanceFromTop;
+    if (intViewportHeight <= 667) {
+        distanceFromTop = 80;
+    } else if (intViewportHeight <= 736) {
+        distanceFromTop = 90;
+    } else if (intViewportHeight <= 812) {
+        distanceFromTop = 100;
+    } else if (intViewportHeight <= 1024) {
+        distanceFromTop = 120;
+    } else {
+      distanceFromTop = 150;
+    }
+    window.scrollTo(window.scrollX, window.scrollY - distanceFromTop);
 });
 
 class Main extends Component {

@@ -23,7 +23,13 @@ $darkGrey: rgb(70, 75, 75);
             a {
                 .link-icon {
                     height: 26px;
+                    transition: all 500ms ease-in-out;
                     width: 26px;
+                    // &:hover {
+                    //     height: 28px;
+                    //     transform: rotate(360deg);
+                    //     width: 28px;
+                    // }
                 }
             }
         }
