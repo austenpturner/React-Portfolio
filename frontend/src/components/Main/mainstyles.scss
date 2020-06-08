@@ -147,9 +147,7 @@ h2 {
         
     }
     #contact {
-        // border: 1px solid white;
         margin: 20px auto 0;
-        // min-height: 90vh;
         h2 {
             margin: 40px auto 20px;
             width: 90%;
@@ -164,58 +162,47 @@ h2 {
                 margin: 10px 0;
             }
             p {
-                margin: 10px 0; 
+                margin: 8px 0; 
             }
         }
         #contact-form {
             @include flex (column, space-evenly);
-            // border: 1px solid white;
-            margin: 10px auto 40px;
+            margin: 20px auto 40px;
             width: 80%;
             h4 {
                 font-weight: 400;
                 margin: 20px auto;
             }
             .form-group {
-                @include flex (column, center);
+                @include flex (row, space-around);
                 flex-wrap: wrap;
                 label,
                 input,
                 textarea {
-                    width: 80%;
-                    margin: 0px auto;
+                    margin: 6px auto;
                 }
                 label {
-                    padding: 0.6em;
+                    padding: 5px;
                     text-align: left;
+                    width: 20%;
                 }
                 input,
                 textarea {
                     border: 2px solid $lightBlue;
-                    border-radius: 5em;
+                    border-radius: 5px;
                     font-size: 0.9em;
-                    height: 2.5em;
-                    padding-left: 1em;
+                    height: 35px;
+                    padding-left: 8px;
+                    width: 80%;
                     &:focus {
                     outline: none;
                     }
                 }
                 textarea {
-                    border-radius: 2em;
+                    border-radius: 5px;
                     font-family: 'Open Sans', sans-serif;
-                }
-                p {
-                    color: rgb(220, 80, 80);
-                    font-weight: bold;
-                    margin: 8px auto;
-                    text-align: center;
-                    width: 60%;
-                }
-                #firstName-error,
-                #lastName-error,
-                #email-error,
-                #msg-error {
-                    display: none;
+                    padding-left: 4px;
+                    padding-top: 6px;
                 }
             }
             #button-container {
@@ -235,7 +222,7 @@ h2 {
                     text-align: center;
                 }
                 #form-error {
-                    color: rgb(220, 80, 80);
+                    color: rgb(255, 124, 124);
                 }
             }
             .hide {

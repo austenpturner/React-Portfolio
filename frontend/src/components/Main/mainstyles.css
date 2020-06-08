@@ -237,7 +237,7 @@ h2 {
 }
 
 #main #contact #content-container p {
-  margin: 10px 0;
+  margin: 8px 0;
 }
 
 #main #contact #contact-form {
@@ -251,7 +251,7 @@ h2 {
   -webkit-box-pack: space-evenly;
       -ms-flex-pack: space-evenly;
           justify-content: space-evenly;
-  margin: 10px auto 40px;
+  margin: 20px auto 40px;
   width: 80%;
 }
 
@@ -264,13 +264,12 @@ h2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
+  -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
@@ -278,22 +277,23 @@ h2 {
 #main #contact #contact-form .form-group label,
 #main #contact #contact-form .form-group input,
 #main #contact #contact-form .form-group textarea {
-  width: 80%;
-  margin: 0px auto;
+  margin: 6px auto;
 }
 
 #main #contact #contact-form .form-group label {
-  padding: 0.6em;
+  padding: 5px;
   text-align: left;
+  width: 20%;
 }
 
 #main #contact #contact-form .form-group input,
 #main #contact #contact-form .form-group textarea {
   border: 2px solid #95ffdc;
-  border-radius: 5em;
+  border-radius: 5px;
   font-size: 0.9em;
-  height: 2.5em;
-  padding-left: 1em;
+  height: 35px;
+  padding-left: 8px;
+  width: 80%;
 }
 
 #main #contact #contact-form .form-group input:focus,
@@ -302,23 +302,10 @@ h2 {
 }
 
 #main #contact #contact-form .form-group textarea {
-  border-radius: 2em;
+  border-radius: 5px;
   font-family: 'Open Sans', sans-serif;
-}
-
-#main #contact #contact-form .form-group p {
-  color: #dc5050;
-  font-weight: bold;
-  margin: 8px auto;
-  text-align: center;
-  width: 60%;
-}
-
-#main #contact #contact-form .form-group #firstName-error,
-#main #contact #contact-form .form-group #lastName-error,
-#main #contact #contact-form .form-group #email-error,
-#main #contact #contact-form .form-group #msg-error {
-  display: none;
+  padding-left: 4px;
+  padding-top: 6px;
 }
 
 #main #contact #contact-form #button-container {
@@ -352,7 +339,7 @@ h2 {
 }
 
 #main #contact #contact-form #button-container #form-error {
-  color: #dc5050;
+  color: #ff7c7c;
 }
 
 #main #contact #contact-form .hide {
