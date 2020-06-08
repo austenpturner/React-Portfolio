@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import "./headerstyles.css";
 import Resume from "../Documents/Austen-Turner-Resume.pdf";
+import "./headerstyles.css";
 
 class NavSlider extends Component {
   render() {

@@ -191,6 +191,7 @@ h2 {
   border: 2px solid #31dfa5;
   border-radius: 5px;
   color: #464b4b;
+  cursor: pointer;
   font-size: 0.8em;
   font-weight: 600;
   margin: 10px;
@@ -207,11 +208,10 @@ h2 {
 
 #main #contact {
   margin: 20px auto 0;
-  min-height: 90vh;
 }
 
 #main #contact h2 {
-  margin: 40px auto;
+  margin: 40px auto 20px;
   width: 90%;
 }
 
@@ -233,27 +233,129 @@ h2 {
 #main #contact #content-container h4 {
   font-size: 1.5em;
   font-weight: 400;
-  margin: 20px 0 30px;
+  margin: 10px 0;
 }
 
 #main #contact #content-container p {
   margin: 10px 0;
 }
 
-#main #contact #content-container button {
+#main #contact #contact-form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  margin: 10px auto 40px;
+  width: 80%;
+}
+
+#main #contact #contact-form h4 {
+  font-weight: 400;
+  margin: 20px auto;
+}
+
+#main #contact #contact-form .form-group {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+#main #contact #contact-form .form-group label,
+#main #contact #contact-form .form-group input,
+#main #contact #contact-form .form-group textarea {
+  width: 80%;
+  margin: 0px auto;
+}
+
+#main #contact #contact-form .form-group label {
+  padding: 0.6em;
+  text-align: left;
+}
+
+#main #contact #contact-form .form-group input,
+#main #contact #contact-form .form-group textarea {
+  border: 2px solid #95ffdc;
+  border-radius: 5em;
+  font-size: 0.9em;
+  height: 2.5em;
+  padding-left: 1em;
+}
+
+#main #contact #contact-form .form-group input:focus,
+#main #contact #contact-form .form-group textarea:focus {
+  outline: none;
+}
+
+#main #contact #contact-form .form-group textarea {
+  border-radius: 2em;
+  font-family: 'Open Sans', sans-serif;
+}
+
+#main #contact #contact-form .form-group p {
+  color: #dc5050;
+  font-weight: bold;
+  margin: 8px auto;
+  text-align: center;
+  width: 60%;
+}
+
+#main #contact #contact-form .form-group #firstName-error,
+#main #contact #contact-form .form-group #lastName-error,
+#main #contact #contact-form .form-group #email-error,
+#main #contact #contact-form .form-group #msg-error {
+  display: none;
+}
+
+#main #contact #contact-form #button-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 20px auto;
+}
+
+#main #contact #contact-form #button-container button {
   background: -webkit-gradient(linear, left top, left bottom, from(#95ffdc), to(#31dfa5));
   background: linear-gradient(#95ffdc, #31dfa5);
   border: 1px solid #31dfa5;
   border-radius: 5px;
-  display: inline-block;
-  font-weight: 600;
-  margin: 50px auto;
-  padding: 16px 20px;
-}
-
-#main #contact #content-container button a {
   color: #464b4b;
   cursor: pointer;
-  text-decoration: none;
+  font-weight: 600;
+  margin: 10px auto 20px;
+  padding: 10px 16px;
+}
+
+#main #contact #contact-form #button-container p {
+  text-align: center;
+}
+
+#main #contact #contact-form #button-container #form-error {
+  color: #dc5050;
+}
+
+#main #contact #contact-form .hide {
+  display: none;
 }
 /*# sourceMappingURL=mainstyles.css.map */
